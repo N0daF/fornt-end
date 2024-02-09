@@ -27,9 +27,6 @@ export async function getAllMovies() {
 
     try {
 
-        console.log('env myConfig: ' + env);
-        console.log('apiConfig.bearer_token: ' + apiConfig[env].bearer_token);
-        console.log('apiConfig.API_URL: ' + apiConfig[env].API_URL);
 
         //const response = await fetch('http://localhost:4000/api/movie/all',
         const response = await fetch(apiConfig[env].API_URL + '/api/movie/all',
