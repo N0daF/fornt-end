@@ -9,7 +9,7 @@ export async function searchMovie(search_data) {
             {
                 method: "GET",
                 headers: {
-                    Authorization: `Bearer ${apiConfig[env].bearer_token}`,
+                    'Authorization': `Bearer ${apiConfig[env].bearer_token}`,
                 }
             },);
 
@@ -36,7 +36,7 @@ export async function getAllMovies() {
             {
                 method: "GET",
                 headers: {
-                    Authorization: `Bearer ${apiConfig[env].bearer_token}`,
+                    'Authorization': `Bearer ${apiConfig[env].bearer_token}`,
                 }
             },);
         return await response.json();
@@ -55,7 +55,7 @@ export async function createMovie(data) {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                Authorization: `Bearer ${apiConfig[env].bearer_token}`,
+                'Authorization': `Bearer ${apiConfig[env].bearer_token}`,
             },
             body: JSON.stringify(data)
 
