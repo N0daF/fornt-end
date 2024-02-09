@@ -7,7 +7,7 @@ export async function searchMovie(search_data) {
         console.log('search_data: ' + search_data);
         const response = await fetch(apiConfig[env].API_URL + '/api/movie/search?search_text=' + search_data,
             {
-                method: "GET",
+
                 headers: {
                     'Authorization': `Bearer ${apiConfig[env].bearer_token}`,
                 }
@@ -34,7 +34,7 @@ export async function getAllMovies() {
         //const response = await fetch('http://localhost:4000/api/movie/all',
         const response = await fetch(apiConfig[env].API_URL + '/api/movie/all',
             {
-                method: "GET",
+   
                 headers: {
                     'Authorization': `Bearer ${apiConfig[env].bearer_token}`,
                 }
@@ -52,7 +52,7 @@ export async function createMovie(data) {
 
         const response = await fetch(apiConfig[env].API_URL + '/api/movie/insert', {
             //mode: 'no-cors',
-            method: 'POST',
+        
             headers: {
                 'Content-Type': 'application/json',
                 'Authorization': `Bearer ${apiConfig[env].bearer_token}`,
