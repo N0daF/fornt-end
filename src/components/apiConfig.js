@@ -8,3 +8,4 @@ export const apiConfig = {
         API_URL : 'https://api.se-rmutl.net',
     }
 };
+module.export = apiConfig;
